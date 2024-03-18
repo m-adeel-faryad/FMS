@@ -6,6 +6,7 @@ namespace FMS.Application.Dto;
 public class AddAccount : IRequest<string>
 {
     public string AccountName { get; set; } = default!;
+    public double Balance { get; set; }
     public string AccountNumber { get; set; } = default!;
     public AccountTypes AccountType { get; set; }
 }
@@ -13,6 +14,7 @@ public class UpdateAccount : IRequest<string>
 {
     public int Id { get; set; }
     public string AccountName { get; set; } = default!;
+    public double Balance { get; set; }
     public string AccountNumber { get; set; } = default!;
     public AccountTypes AccountType { get; set; }
 }
@@ -24,6 +26,7 @@ public class GetById
     public string AccountName { get; set; } = default!;
     public string AccountNumber { get; set; } = default!;
     public bool IsDeleted { get; set; }
+    public double Balance { get; set; }
     public DateTime CreateDateTime { get; set; }
     public AccountTypes AccountType { get; set; }
 }

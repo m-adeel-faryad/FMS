@@ -11,5 +11,6 @@ public class Account : BaseEntity
 {
     public string AccountName { get; set; } = default!;
     public string AccountNumber { get; set; } = default!;
+    public double Balance { get; set; }
     public AccountTypes AccountType { get; set; }
 }

@@ -20,7 +20,8 @@ public sealed class GetAllQueryHandler(IRepository<Account> repository)
             CreateDateTime = x.CreatedDateTime,
             AccountName = x.AccountName,
             AccountType = x.AccountType,
-            IsDeleted = x.IsDeleted
+            IsDeleted = x.IsDeleted,
+            Balance = x.Balance
         }).ToList();
         return Task.FromResult(mapped);
     }

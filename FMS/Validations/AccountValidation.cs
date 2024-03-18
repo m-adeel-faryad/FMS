@@ -11,6 +11,7 @@ public class AddAccountValidator : AbstractValidator<AddAccount>
         RuleFor(x => x.AccountName).NotEmpty().NotNull().MaximumLength(50);
         RuleFor(x => x.AccountNumber).NotEmpty().NotNull().MaximumLength(25);
         RuleFor(x => x.AccountType).NotEmpty().NotNull();
+        RuleFor(x => x.Balance).NotEmpty().NotNull().GreaterThan(0);
     }
 }
 
@@ -22,5 +23,7 @@ public class UpdateAccountValidator : AbstractValidator<UpdateAccount>
         RuleFor(x => x.AccountName).NotEmpty().NotNull().MaximumLength(50);
         RuleFor(x => x.AccountNumber).NotEmpty().NotNull().MaximumLength(25);
         RuleFor(x => x.AccountType).NotEmpty().NotNull();
+        RuleFor(x => x.Balance).NotEmpty().NotNull().GreaterThan(0);
+
     }
 }
